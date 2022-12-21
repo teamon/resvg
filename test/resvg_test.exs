@@ -1,8 +1,7 @@
 defmodule ResvgTest do
   use ExUnit.Case
-  doctest Resvg
 
-  test "greets the world" do
-    assert Resvg.hello() == :world
+  test "add/2" do
+    assert Resvg.add(1, 2) == 3
   end
 end

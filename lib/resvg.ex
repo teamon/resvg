@@ -1,18 +1,5 @@
 defmodule Resvg do
-  @moduledoc """
-  Documentation for `Resvg`.
-  """
+  use Rustler, otp_app: :resvg, crate: "resvg_nif"
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Resvg.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  def add(_a, _b), do: :erlang.nif_error(:nif_not_loaded)
 end
